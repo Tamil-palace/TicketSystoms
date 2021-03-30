@@ -1,0 +1,17 @@
+<div>
+<form  fxLayoutAlign="stretch" fxLayout="column" [formGroup]='formGroupss' (ngSubmit)="createTicket()">
+    <mat-form-field  >
+      <mat-label>Issue Catogory</mat-label>
+      <input matInput placeholder="Issue" formControlName="issue">
+    </mat-form-field>
+    <mat-form-field >
+      <mat-label>Ticket priority</mat-label>
+      <input matInput placeholder="Priority" formControlName="priority">
+    </mat-form-field>
+    <mat-form-field >
+      <mat-label>Leave a comment</mat-label>
+      <input matInput placeholder="Comment..." formControlName="comment">
+    </mat-form-field>
+    <button mat-button type="submit">Create Ticket</button>
+</form>
+</div>  

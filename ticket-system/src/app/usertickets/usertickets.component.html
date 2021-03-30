@@ -1,0 +1,44 @@
+<button routerLink="/createticket">create new ticket</button >
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell fxFlex="100px" *matHeaderCellDef> </th>
+      <td mat-cell fxFlex="100px" *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell fxFlex="200px" *matHeaderCellDef> STATUS </th>
+      <td mat-cell fxFlex="200px" *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell fxFlex="200px" *matHeaderCellDef> COMMENTS </th>
+      <td mat-cell fxFlex="200px" *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell fxFlex="200px" *matHeaderCellDef> CreatedAt </th>
+      <td mat-cell fxFlex="200px" *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+    <ng-container matColumnDef="priority">
+      <th mat-header-cell fxFlex="200px" *matHeaderCellDef> PRIORITY </th>
+      <td mat-cell fxFlex="200px" *matCellDef="let element"> {{element.priority}} </td>
+    </ng-container>
+    <ng-container matColumnDef="category">
+      <th mat-header-cell fxFlex="200px" *matHeaderCellDef> CATEGORY </th>
+      <td mat-cell fxFlex="200px" *matCellDef="let element"> {{element.category}} </td>
+    </ng-container>
+    
+    <tr mat-header-row  *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
